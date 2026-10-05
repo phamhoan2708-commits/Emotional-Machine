@@ -1,0 +1,24 @@
+labels:
+  - angry
+  - disgust
+  - fear
+  - happy
+  - sad
+  - surprise
+  - neutral
+model:
+  path: models/expression_model.keras
+  input_size: 48
+  color_mode: grayscale
+  confidence_threshold: 0.60
+  face_scale_factor: 1.1
+  min_neighbors: 5
+smoothing:
+  window_size: 7
+llm:
+  enabled: false
+  provider: openai_compatible
+  endpoint_env: LLM_API_URL
+  api_key_env: LLM_API_KEY
+  model_env: LLM_MODEL
+  min_call_interval_seconds: 30
